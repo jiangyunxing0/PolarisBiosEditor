@@ -1393,6 +1393,7 @@ namespace PolarisBiosEditor
 
         }
 
+        //added option for choosing timings
         private void apply_timings(int vendor_index, int timing_index)
         {
             for (var i = 0; i < tableVRAM_TIMING.Items.Count; i++)
@@ -1414,36 +1415,12 @@ namespace PolarisBiosEditor
 
                 real_mhz = (UInt32)uint32.ConvertFromString(name.Substring(name.IndexOf(':') + 1));
 
-                if (real_mhz >= 1500 && (mem_index == vendor_index || mem_index == 32768))
+                if (this.rb1500.Checked && real_mhz >= 1500 && (mem_index == vendor_index || mem_index == 32768))
                 {
                     // set the timings
                     container.SubItems[1].Text = timings[timing_index];
                 }
-            }
-        }
-
-        private void apply_timings1(int vendor_index, int timing_index)
-        {
-            for (var i = 0; i < tableVRAM_TIMING.Items.Count; i++)
-            {
-                ListViewItem container = tableVRAM_TIMING.Items[i];
-                var name = container.Text;
-                UInt32 real_mhz = 0;
-                int mem_index = -1;
-
-                if (name.IndexOf(':') > 0)
-                {
-                    // get mem index
-                    mem_index = (Int32)int32.ConvertFromString(name.Substring(0, 1));
-                }
-                else
-                {
-                    mem_index = 32768;
-                }
-
-                real_mhz = (UInt32)uint32.ConvertFromString(name.Substring(name.IndexOf(':') + 1));
-
-                if (real_mhz >= 1750 && (mem_index == vendor_index || mem_index == 32768))
+                else if (this.rb1750.Checked && real_mhz >= 1750 && (mem_index == vendor_index || mem_index == 32768))
                 {
                     // set the timings
                     container.SubItems[1].Text = timings[timing_index];
@@ -1553,12 +1530,12 @@ namespace PolarisBiosEditor
                 if (MessageBox.Show("Do you want faster Uber-mix 3.1?", "Important Question", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     int num = (int)MessageBox.Show("Samsung Memory found at index #" + (object)samsung_index + ", now applying UBERMIX 3.1 timings to 1750+ strap(s)");
-                    this.apply_timings1(samsung_index, 0);
+                    this.apply_timings(samsung_index, 0);
                 }
                 else
                 {
                     int num = (int)MessageBox.Show("Samsung Memory found at index #" + (object)samsung_index + ", now applying UBERMIX 3.2 timings to 1750+ strap(s)");
-                    this.apply_timings1(samsung_index, 1);
+                    this.apply_timings(samsung_index, 1);
                 }
             }
 

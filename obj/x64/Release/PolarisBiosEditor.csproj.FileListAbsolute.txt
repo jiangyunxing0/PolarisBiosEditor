@@ -1,0 +1,9 @@
+C:\Users\VASKE\Desktop\PolarisBiosEditor-master\bin\x64\Release\PolarisBiosEditor.exe.config
+C:\Users\VASKE\Desktop\PolarisBiosEditor-master\bin\x64\Release\PolarisBiosEditor.exe
+C:\Users\VASKE\Desktop\PolarisBiosEditor-master\bin\x64\Release\PolarisBiosEditor.pdb
+C:\Users\VASKE\Desktop\PolarisBiosEditor-master\obj\x64\Release\PolarisBiosEditor.csprojAssemblyReference.cache
+C:\Users\VASKE\Desktop\PolarisBiosEditor-master\obj\x64\Release\PolarisBiosEditor.PolarisBiosEditor.resources
+C:\Users\VASKE\Desktop\PolarisBiosEditor-master\obj\x64\Release\PolarisBiosEditor.Properties.Resources.resources
+C:\Users\VASKE\Desktop\PolarisBiosEditor-master\obj\x64\Release\PolarisBiosEditor.csproj.GenerateResource.cache
+C:\Users\VASKE\Desktop\PolarisBiosEditor-master\obj\x64\Release\PolarisBiosEditor.exe
+C:\Users\VASKE\Desktop\PolarisBiosEditor-master\obj\x64\Release\PolarisBiosEditor.pdb

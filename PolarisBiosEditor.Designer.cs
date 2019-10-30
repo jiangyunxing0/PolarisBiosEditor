@@ -70,6 +70,9 @@ namespace PolarisBiosEditor
             this.apply = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rb1500 = new System.Windows.Forms.RadioButton();
+            this.rb1750 = new System.Windows.Forms.RadioButton();
             this.boxROM.SuspendLayout();
             this.boxPOWERPLAY.SuspendLayout();
             this.boxPOWERTUNE.SuspendLayout();
@@ -77,6 +80,7 @@ namespace PolarisBiosEditor
             this.boxGPU.SuspendLayout();
             this.boxMEM.SuspendLayout();
             this.boxVRAM.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // open
@@ -135,6 +139,7 @@ namespace PolarisBiosEditor
             this.columnHeader2});
             this.tableROM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableROM.Font = new System.Drawing.Font("Courier New", 8.25F);
+            this.tableROM.HideSelection = false;
             this.tableROM.Location = new System.Drawing.Point(3, 16);
             this.tableROM.Name = "tableROM";
             this.tableROM.Size = new System.Drawing.Size(259, 121);
@@ -168,6 +173,7 @@ namespace PolarisBiosEditor
             this.columnHeader4});
             this.tablePOWERPLAY.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tablePOWERPLAY.Font = new System.Drawing.Font("Courier New", 8.25F);
+            this.tablePOWERPLAY.HideSelection = false;
             this.tablePOWERPLAY.Location = new System.Drawing.Point(3, 16);
             this.tablePOWERPLAY.Name = "tablePOWERPLAY";
             this.tablePOWERPLAY.Size = new System.Drawing.Size(259, 138);
@@ -203,6 +209,7 @@ namespace PolarisBiosEditor
             this.columnHeader5,
             this.columnHeader6});
             this.tablePOWERTUNE.Font = new System.Drawing.Font("Courier New", 8.25F);
+            this.tablePOWERTUNE.HideSelection = false;
             this.tablePOWERTUNE.Location = new System.Drawing.Point(3, 16);
             this.tablePOWERTUNE.Name = "tablePOWERTUNE";
             this.tablePOWERTUNE.Size = new System.Drawing.Size(254, 233);
@@ -238,6 +245,7 @@ namespace PolarisBiosEditor
             this.columnHeader9,
             this.columnHeader10});
             this.tableFAN.Font = new System.Drawing.Font("Courier New", 8.25F);
+            this.tableFAN.HideSelection = false;
             this.tableFAN.Location = new System.Drawing.Point(3, 16);
             this.tableFAN.Name = "tableFAN";
             this.tableFAN.Size = new System.Drawing.Size(259, 263);
@@ -270,6 +278,7 @@ namespace PolarisBiosEditor
             this.columnHeader12});
             this.tableGPU.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableGPU.Font = new System.Drawing.Font("Courier New", 8.25F);
+            this.tableGPU.HideSelection = false;
             this.tableGPU.Location = new System.Drawing.Point(3, 16);
             this.tableGPU.Name = "tableGPU";
             this.tableGPU.Size = new System.Drawing.Size(254, 184);
@@ -302,6 +311,7 @@ namespace PolarisBiosEditor
             this.columnHeader14});
             this.tableMEMORY.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableMEMORY.Font = new System.Drawing.Font("Courier New", 8.25F);
+            this.tableMEMORY.HideSelection = false;
             this.tableMEMORY.Location = new System.Drawing.Point(3, 16);
             this.tableMEMORY.Name = "tableMEMORY";
             this.tableMEMORY.Size = new System.Drawing.Size(254, 105);
@@ -341,6 +351,7 @@ namespace PolarisBiosEditor
             this.columnHeader15,
             this.columnHeader16});
             this.tableVRAM_TIMING.Font = new System.Drawing.Font("Courier New", 8.25F);
+            this.tableVRAM_TIMING.HideSelection = false;
             this.tableVRAM_TIMING.Location = new System.Drawing.Point(3, 209);
             this.tableVRAM_TIMING.Name = "tableVRAM_TIMING";
             this.tableVRAM_TIMING.Size = new System.Drawing.Size(262, 373);
@@ -377,6 +388,7 @@ namespace PolarisBiosEditor
             this.columnHeader7,
             this.columnHeader8});
             this.tableVRAM.Font = new System.Drawing.Font("Courier New", 8.25F);
+            this.tableVRAM.HideSelection = false;
             this.tableVRAM.Location = new System.Drawing.Point(3, 43);
             this.tableVRAM.Name = "tableVRAM";
             this.tableVRAM.Size = new System.Drawing.Size(262, 160);
@@ -448,9 +460,43 @@ namespace PolarisBiosEditor
             this.linkLabel1.Text = "BUY PolariBiosEditor Pro performance";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rb1750);
+            this.groupBox1.Controls.Add(this.rb1500);
+            this.groupBox1.Location = new System.Drawing.Point(361, 630);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(157, 55);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Timings";
+            // 
+            // rb1500
+            // 
+            this.rb1500.AutoSize = true;
+            this.rb1500.Location = new System.Drawing.Point(6, 15);
+            this.rb1500.Name = "rb1500";
+            this.rb1500.Size = new System.Drawing.Size(81, 17);
+            this.rb1500.TabIndex = 0;
+            this.rb1500.TabStop = true;
+            this.rb1500.Text = "strap 1500+";
+            this.rb1500.UseVisualStyleBackColor = true;
+            // 
+            // rb1750
+            // 
+            this.rb1750.AutoSize = true;
+            this.rb1750.Location = new System.Drawing.Point(6, 35);
+            this.rb1750.Name = "rb1750";
+            this.rb1750.Size = new System.Drawing.Size(81, 17);
+            this.rb1750.TabIndex = 0;
+            this.rb1750.TabStop = true;
+            this.rb1750.Text = "strap 1750+";
+            this.rb1750.UseVisualStyleBackColor = true;
+            // 
             // PolarisBiosEditor
             // 
             this.ClientSize = new System.Drawing.Size(820, 733);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.boxFAN);
@@ -478,6 +524,8 @@ namespace PolarisBiosEditor
             this.boxGPU.ResumeLayout(false);
             this.boxMEM.ResumeLayout(false);
             this.boxVRAM.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,5 +574,8 @@ namespace PolarisBiosEditor
     private System.Windows.Forms.Button apply;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rb1750;
+        private System.Windows.Forms.RadioButton rb1500;
     }
 }

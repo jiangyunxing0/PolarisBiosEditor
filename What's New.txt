@@ -1,0 +1,31 @@
+Polaris Bios Editor 3.8 tweaked by vaske
+
+BIOS editor for RX 460/470/480, RX 550/560/570/580/590 video cards.
+
+-------------------------------------------------
+What's new ?
+- Added support for new polaris 12 chip's (0x6980,0x6981,0x6985,0x6986,0x6987,0x6995,0x699F)
+- Support AMD Radeon RX 580X 
+- Support AMD Radeon RX 570X 
+- Support AMD Radeon RX 560X 
+- Support AMD Radeon RX 550X  
+- Added Manufacturer recognition
+- Added AMD Driver Mode Switching from Graphic to Compute by one click (Experimental)
+- Changed icon of program
+- Added RX550 timings
+- Fixed power save option now applying GPU VDDC voltage 65284mv on last tree entry
+- Added Clock Stretch Amount
+- Added small power limit option
+- Added 1750+ strap modding (now can choice betwen 1500+ strap or 1750+)
+- Fan Mod Fixed
+- Added Small Power Limit (W)
+- Added support for 67C4 device (Radeon Pro) 
+- Added Configurable TDP
+- All timings updated and fixed
+- Added RX560 16MH/s timings
+- Added RX560 timing for XMR
+- Added option to can choice special optimised timing only for rx560-460 micron/hynix or can use PRO timings optimised for all cards
+- Background is removed
+- ETH AND XMR MODS
+- Auto Overclocking and undervolting
+- Power save option
